@@ -2,7 +2,7 @@ local mod = SweetPack
 
 local description = {
 	"Teleports you to the boss room after starting a new floor",
-    "Will not activate in Depths II, the Blue Womb, the Void, or Home",
+    "Will not activate in Depths II, Blue Womb, Void, the Ascent or Home",
     "Bosses will drop an additional heart when defeated"
 }
 mod:CreateEID(CollectibleType.COLLECTIBLE_CURSE_OF_THE_EMPEROR, description)
@@ -19,7 +19,8 @@ function mod:EmperorCurseNewFloor()
     and stage ~= LevelStage.STAGE3_2 -- Not in Depths II
     and stage ~= LevelStage.STAGE4_3 -- Not in the Blue Womb
     and stage ~= LevelStage.STAGE7 -- Not in the Void
-    and stage ~= LevelStage.STAGE8 then -- Not in Home
+    and stage ~= LevelStage.STAGE8 -- Not in Home
+    and not level:IsAscent() then -- Not in the Ascent
         Isaac.GetPlayer(0):GetData().EmperorCurseTimer = 30
     end
 end

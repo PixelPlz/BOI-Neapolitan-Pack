@@ -10,7 +10,10 @@ mod:CreateEncylopedie(CollectibleType.COLLECTIBLE_X, description)
 
 -- Get a random color
 function mod:GetFunkyColor()
-	return Color(math.random(),math.random(),math.random(), 1, math.random(),math.random(),math.random())
+	local color = Color(math.random(),math.random(),math.random(), 1, math.random() / 2,math.random() / 2,math.random() / 2)
+	color:SetColorize(math.random(),math.random(),math.random(), math.random())
+	color:SetTint(math.random(),math.random(),math.random(), 1)
+	return color
 end
 
 
@@ -25,7 +28,6 @@ function mod:XNewRoom()
 				local player = Isaac.GetPlayer(i)
 
 				-- Reroll stats + items
-				player:RemoveCollectible(CollectibleType.COLLECTIBLE_X, true, -1, true)
 				player:UseActiveItem(CollectibleType.COLLECTIBLE_D4, UseFlag.USE_NOANIM | UseFlag.USE_REMOVEACTIVE, -1, 0)
 				player:UseActiveItem(CollectibleType.COLLECTIBLE_D8, UseFlag.USE_NOANIM, -1, 0)
 
@@ -42,9 +44,6 @@ function mod:XNewRoom()
 				else
 					data.XRoomsCleared = data.XRoomsCleared + 1
 				end
-
-				-- Give back X
-				player:AddCollectible(CollectibleType.COLLECTIBLE_X, 0, true, 0, 0)
 			end
 		end
 
@@ -118,10 +117,8 @@ mod:AddPriorityCallback(ModCallbacks.MC_POST_NPC_INIT, CallbackPriority.LATE, mo
 -- Random projectile flags
 function mod:XProjectileInit(projectile)
 	if mod:DoesAnyoneHaveItem(CollectibleType.COLLECTIBLE_X) then
-		for i = 1, math.random(1, 2) do
-			projectile:AddProjectileFlags(1<<math.random(0, 57))
-			projectile:AddChangeFlags(1<<math.random(0, 57))
-		end
+		projectile:AddProjectileFlags(1<<math.random(0, 57))
+		projectile:AddChangeFlags(1<<math.random(0, 57))
 	end
 end
 mod:AddCallback(ModCallbacks.MC_POST_PROJECTILE_INIT, mod.XProjectileInit)

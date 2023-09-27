@@ -17,5 +17,5 @@
 
     <!-- Neapolitan pack -->
     <active  id="13" name="El Loco" description="Maddening farts" gfx="collectibles_ElLoco.png" quality="2" tags="offensive" maxcharges="2" chargetype="normal" />
-    <passive id="14" name=" " description=" " gfx="collectibles_X.png" quality="0" tags="offensive nocantrip lazarussharedglobal" craftquality="4" shopprice="99" />
+    <passive id="14" name=" " description=" " gfx="collectibles_X.png" quality="0" tags="quest offensive nocantrip lazarussharedglobal" craftquality="4" shopprice="99" />
 </items>

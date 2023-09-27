@@ -16,7 +16,7 @@ function mod:TammysAshesUse(id, rng, player, flags, slot, vardata)
 
 	-- Ashes
 	local ashColor = Color(1,1,1, 1)
-	ashColor:SetColorize(0.25,0.25,0.25, 1);
+	ashColor:SetColorize(0.25,0.25,0.25, 1)
 
 	local ashes = Isaac.Spawn(EntityType.ENTITY_EFFECT, EffectVariant.FART, 2, player.Position, Vector.Zero, player):GetSprite()
 	ashes.Color = ashColor

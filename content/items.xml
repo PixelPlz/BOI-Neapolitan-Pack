@@ -1,0 +1,21 @@
+<items gfxroot="gfx/items/" version="1" deathanm2="gfx/death_items.anm2">
+    <!-- Vanilla pack -->
+    <passive id="1" name="Cinnamon Gumball" description="Don't swallow it" gfx="collectibles_CinnamonGumball.png" quality="2" tags="food offensive summonable" cache="speed" />
+    <passive id="2" name="Rad Roach" description="Multiplies under stress" gfx="collectibles_RadRoach.png" quality="2" tags="fly nolostbr summonable" />
+    <passive id="3" name="Faustian Donut" description="Mmm... donut" gfx="collectibles_FaustianDonut.png" quality="3" tags="food offensive summonable" cache="damage firedelay range luck" />
+    <passive id="4" name="Curse of the Emperor" description="Embrace strife" gfx="collectibles_CurseOfTheEmperor.png" quality="1" tags="nogreed offensive nocantrip lazarussharedglobal" />
+    <passive id="5" name="Heart of Gold" description="Reap what you sow" gfx="collectibles_HeartOfGold.png" quality="3" tags="offensive summonable lazarussharedglobal" maxhearts="2" hearts="2" /> 
+    <passive id="6" name="Glass of Water" description="Pills go down smoother" gfx="collectibles_GlassOfWater.png" quality="1" tags="nokeeper nolostbr summonable" />
+
+    <!-- Chocolate pack -->
+    <passive id="7"  name="Lamb's Sackcloth" description="Kings and slaves alike will cower" gfx="collectibles_LambsSackcloth.png" quality="2" tags="nogreed offensive summonable nocantrip" />
+    <active  id="8"  name="Tammy's Ashes" description="Still angry" gfx="collectibles_TammysAshes.png" quality="2" tags="offensive" chargetype="normal" maxcharges="2" />
+    <active  id="9"  name="Drum of War" description="How loud!" gfx="collectibles_DrumOfWar.png" quality="1" tags="offensive" chargetype="normal" maxcharges="3" />
+    <passive id="10" name="His Blood" description="Mom's favorite" gfx="collectibles_HisBlood.png" quality="3" tags="angel nogreed nokeeper nolostbr summonable nocantrip" />
+    <passive id="11" name="Curse of the Fool" description="Embrace cowardice" gfx="collectibles_CurseOfTheFool.png" quality="1" tags="nogreed nolostbr nocantrip lazarussharedglobal" />
+    <passive id="12" name="Rainbow Vial" description="Taste the rainbow" gfx="collectibles_RainbowVial.png" quality="4" tags="nokeeper nolostbr" maxhearts="2" hearts="2" soulhearts="2" blackhearts="2" />
+
+    <!-- Neapolitan pack -->
+    <active  id="13" name="El Loco" description="Maddening farts" gfx="collectibles_ElLoco.png" quality="2" tags="offensive" maxcharges="2" chargetype="normal" />
+    <passive id="14" name=" " description=" " gfx="collectibles_X.png" quality="0" tags="offensive nocantrip lazarussharedglobal" craftquality="4" shopprice="99" />
+</items>

@@ -1,0 +1,14 @@
+<costumes anm2root="gfx/characters/">
+	<!-- Vanilla pack -->
+	<costume id="1" anm2path="cinnamon gumball.anm2" 	 type="passive" />
+	<costume id="2" anm2path="rad roach.anm2" 			 type="passive" />
+	<costume id="3" anm2path="faustian donut.anm2" 		 type="passive" />
+	<costume id="4" anm2path="curse of the emperor.anm2" type="passive" />
+	<costume id="5" anm2path="heart of gold.anm2" 		 type="passive" />
+	<costume id="6" anm2path="glass of water.anm2" 		 type="passive" />
+
+	<!-- Chocolate pack -->
+	<costume id="7"  anm2path="lambs sackcloth.anm2"   type="passive" />
+	<costume id="10" anm2path="his blood.anm2" 		   type="passive" />
+	<costume id="11" anm2path="curse of the fool.anm2" type="passive" />
+</costumes>

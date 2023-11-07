@@ -1,10 +1,14 @@
 local mod = SweetPack
 
-local description = {
+local descriptionEN = {
 	"Spawns 3 purgatory ghosts",
 }
-mod:CreateEID(CollectibleType.COLLECTIBLE_TAMMYS_ASHES, description)
-mod:CreateEncylopedie(CollectibleType.COLLECTIBLE_TAMMYS_ASHES, description)
+local descriptionRU = {
+	"Создает 3 призрака чистилища",
+}
+mod:CreateEID(CollectibleType.COLLECTIBLE_TAMMYS_ASHES, descriptionEN, "Tammy's Ashes", "en_us")
+mod:CreateEID(CollectibleType.COLLECTIBLE_TAMMYS_ASHES, descriptionRU, "Прах Тэмми", "ru")
+mod:CreateEncylopedie(CollectibleType.COLLECTIBLE_TAMMYS_ASHES, descriptionEN)
 
 
 

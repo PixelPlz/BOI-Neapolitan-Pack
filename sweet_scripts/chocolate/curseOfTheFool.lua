@@ -1,11 +1,16 @@
 local mod = SweetPack
 
-local description = {
+local descriptionEN = {
 	"{{Collectible422}} Adds a stacking 7% chance of activating Glowing Hourglass every time you get hit",
     "Once activated, the chance will stay at 0% until you complete a room",
 }
-mod:CreateEID(CollectibleType.COLLECTIBLE_CURSE_OF_THE_FOOL, description)
-mod:CreateEncylopedie(CollectibleType.COLLECTIBLE_CURSE_OF_THE_FOOL, description)
+local descriptionRU = {
+	"{{Collectible422}} Добавляет накапливающее 7% шанса активировать Светящиеся песочные часы каждый раз, когда вы получаете урон",
+    "После активации, шанс останется на 0% пока вы не зачистите комнату",
+}
+mod:CreateEID(CollectibleType.COLLECTIBLE_CURSE_OF_THE_FOOL, descriptionEN, "Curse of the Fool", "en_us")
+mod:CreateEID(CollectibleType.COLLECTIBLE_CURSE_OF_THE_FOOL, descriptionRU, "Проклятие Дурака", "ru")
+mod:CreateEncylopedie(CollectibleType.COLLECTIBLE_CURSE_OF_THE_FOOL, descriptionEN)
 
 
 

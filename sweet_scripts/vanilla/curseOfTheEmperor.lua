@@ -1,12 +1,18 @@
 local mod = SweetPack
 
-local description = {
+local descriptionEN = {
 	"Teleports you to the boss room after starting a new floor",
     "Will not activate in Depths II, Blue Womb, Void, the Ascent or Home",
     "Bosses will drop an additional heart when defeated"
 }
-mod:CreateEID(CollectibleType.COLLECTIBLE_CURSE_OF_THE_EMPEROR, description)
-mod:CreateEncylopedie(CollectibleType.COLLECTIBLE_CURSE_OF_THE_EMPEROR, description)
+local descriptionRU = {
+	"Телепортирует вас в комнату босса после начала нового этажа",
+    "Не активируется в Глубина II, Синяя Матка, Пустота, Восхождение или Дом",
+    "С боссов выпадет дополнительное сердце когда побеждены"
+}
+mod:CreateEID(CollectibleType.COLLECTIBLE_CURSE_OF_THE_EMPEROR, descriptionEN, "Curse of the Emperor", "en_us")
+mod:CreateEID(CollectibleType.COLLECTIBLE_CURSE_OF_THE_EMPEROR, descriptionRU, "Проклятие Императора", "ru")
+mod:CreateEncylopedie(CollectibleType.COLLECTIBLE_CURSE_OF_THE_EMPEROR, descriptionEN)
 
 
 

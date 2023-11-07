@@ -1,12 +1,18 @@
 local mod = SweetPack
 
-local description = {
+local descriptionEN = {
 	"Entering an uncleared normal room grants 1-2 blue flies and 0-1 blue spiders",
 	"{{MiniBoss}} Entering an uncleared miniboss room spawns 2-3 blue flies and 1-2 blue spiders",
 	"{{BossRoom}} Entering an uncleared boss room spawns 5 horsemen locusts",
 }
-mod:CreateEID(CollectibleType.COLLECTIBLE_LAMBS_SACKCLOTH, description)
-mod:CreateEncylopedie(CollectibleType.COLLECTIBLE_LAMBS_SACKCLOTH, description)
+local descriptionRU = {
+	"При входе в неочищенную обычную комнату дает 1-2 синих мух и 0-1 синих пауков",
+	"{{MiniBoss}} При входе в неочищенную комнату минибосса создает 2-3 синих мух и 1-2 синих пауков",
+	"{{BossRoom}} При входе в неочищенную комнату босса создает 5 саранчи всадников",
+}
+mod:CreateEID(CollectibleType.COLLECTIBLE_LAMBS_SACKCLOTH, descriptionEN, "Lamb's Sackcloth", "en_us")
+mod:CreateEID(CollectibleType.COLLECTIBLE_LAMBS_SACKCLOTH, descriptionRU, "Мешковина ягненка", "ru")
+mod:CreateEncylopedie(CollectibleType.COLLECTIBLE_LAMBS_SACKCLOTH, descriptionEN)
 
 
 

@@ -1,10 +1,14 @@
 local mod = SweetPack
 
-local description = {
+local descriptionEN = {
 	"Applies a random status effect to every enemy in the room",
 }
-mod:CreateEID(CollectibleType.COLLECTIBLE_EL_LOCO, description)
-mod:CreateEncylopedie(CollectibleType.COLLECTIBLE_EL_LOCO, description)
+local descriptionRU = {
+	"Применяется эффект случайного состояния к каждому врагу в комнате",
+}
+mod:CreateEID(CollectibleType.COLLECTIBLE_EL_LOCO, descriptionEN, "El Loco", "en_us")
+mod:CreateEID(CollectibleType.COLLECTIBLE_EL_LOCO, descriptionRU, "El Loco", "ru")
+mod:CreateEncylopedie(CollectibleType.COLLECTIBLE_EL_LOCO, descriptionEN)
 
 
 

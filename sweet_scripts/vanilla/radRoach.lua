@@ -1,10 +1,14 @@
 local mod = SweetPack
 
-local description = {
+local descriptionEN = {
 	"{{Collectible350}} On hit, applies the Toxic Shock effect and spawns 1-2 poison attack flies",
 }
-mod:CreateEID(CollectibleType.COLLECTIBLE_RAD_ROACH, description)
-mod:CreateEncylopedie(CollectibleType.COLLECTIBLE_RAD_ROACH, description)
+local descriptionRU = {
+	"{{Collectible350}} При получении урона, вызывает эффект Токсического Шока и создаёт 1-2 ядовитых атакующих мух",
+}
+mod:CreateEID(CollectibleType.COLLECTIBLE_RAD_ROACH, descriptionEN, "Rad Roach", "en_us")
+mod:CreateEID(CollectibleType.COLLECTIBLE_RAD_ROACH, descriptionRU, "Радиактивный Таракан", "ru")
+mod:CreateEncylopedie(CollectibleType.COLLECTIBLE_RAD_ROACH, descriptionEN)
 
 
 

@@ -1,10 +1,14 @@
 local mod = SweetPack
 
-local description = {
+local descriptionEN = {
 	"{{HalfHeart}} Heals half a red heart when entering an uncleared room at or below three red hearts",
 }
-mod:CreateEID(CollectibleType.COLLECTIBLE_HIS_BLOOD, description)
-mod:CreateEncylopedie(CollectibleType.COLLECTIBLE_HIS_BLOOD, description)
+local descriptionRU = {
+	"{{HalfHeart}} Лечит половину красного сердца при входе в неочищенную комнату имея три или меньше красных сердец",
+}
+mod:CreateEID(CollectibleType.COLLECTIBLE_HIS_BLOOD, descriptionEN, "His Blood", "en_us")
+mod:CreateEID(CollectibleType.COLLECTIBLE_HIS_BLOOD, descriptionRU, "Его Кровь", "ru")
+mod:CreateEncylopedie(CollectibleType.COLLECTIBLE_HIS_BLOOD, descriptionEN)
 
 
 

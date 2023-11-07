@@ -1,13 +1,20 @@
 local mod = SweetPack
 
-local description = {
+local descriptionEN = {
 	"↑ +0.5 Damage up",
 	"↑ +15% Tear Multiplier",
 	"↑ +2 Range up",
 	"↓ -1 Luck down",
 }
-mod:CreateEID(CollectibleType.COLLECTIBLE_FAUSTIAN_DONUT, description)
-mod:CreateEncylopedie(CollectibleType.COLLECTIBLE_FAUSTIAN_DONUT, description)
+local descriptionRU = {
+	"↑ +0.5 к урону",
+	"↑ +15% множитель слезы",
+	"↑ +2 дальности",
+	"↓ -1 удача",
+}
+mod:CreateEID(CollectibleType.COLLECTIBLE_FAUSTIAN_DONUT, descriptionEN, "Faustian Donut", "en_us")
+mod:CreateEID(CollectibleType.COLLECTIBLE_FAUSTIAN_DONUT, descriptionRU, "Фаустовский Пончик", "ru")
+mod:CreateEncylopedie(CollectibleType.COLLECTIBLE_FAUSTIAN_DONUT, descriptionEN)
 
 
 

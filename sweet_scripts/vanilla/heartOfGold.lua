@@ -1,12 +1,18 @@
 local mod = SweetPack
 
-local description = {
+local descriptionEN = {
     "{{Coin}} Entering a new floor grants +7 coins",
 	"↑ +1 Health up",
 	"{{GoldenHeart}} +1 Golden Heart",
 }
-mod:CreateEID(CollectibleType.COLLECTIBLE_HEART_OF_GOLD, description)
-mod:CreateEncylopedie(CollectibleType.COLLECTIBLE_HEART_OF_GOLD, description)
+local descriptionRU = {
+    "{{Coin}} Заходя на новый этаж дает +7 монет",
+	"↑ +1 к здоровью",
+	"{{GoldenHeart}} +1 Золотое Сердце",
+}
+mod:CreateEID(CollectibleType.COLLECTIBLE_HEART_OF_GOLD, descriptionEN, "Heart of Gold", "en_us")
+mod:CreateEID(CollectibleType.COLLECTIBLE_HEART_OF_GOLD, descriptionRU, "Сердце Золота", "ru")
+mod:CreateEncylopedie(CollectibleType.COLLECTIBLE_HEART_OF_GOLD, descriptionEN)
 
 
 

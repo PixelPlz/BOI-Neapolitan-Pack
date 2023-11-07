@@ -1,6 +1,6 @@
 local mod = SweetPack
 
-local description = {
+local descriptionEN = {
 	"{{Heart}} +1 Health up",
 	"{{SoulHeart}} +1 Soul Heart",
 	"{{EternalHeart}} +1 Eternal Heart",
@@ -9,8 +9,18 @@ local description = {
 	"{{BoneHeart}} +1 Bone Heart",
 	"{{RottenHeart}} +1 Rotten Heart",
 }
-mod:CreateEID(CollectibleType.COLLECTIBLE_RAINBOW_VIAL, description)
-mod:CreateEncylopedie(CollectibleType.COLLECTIBLE_RAINBOW_VIAL, description)
+local descriptionRU = {
+	"{{Heart}} +1 к здоровью",
+	"{{SoulHeart}} +1 сердце души",
+	"{{EternalHeart}} +1 вечное сердце",
+	"{{BlackHeart}} +1 черное сердце",
+	"{{GoldenHeart}} +1 золотое сердце",
+	"{{BoneHeart}} +1 костяное сердце",
+	"{{RottenHeart}} +1 гнилое сердце",
+}
+mod:CreateEID(CollectibleType.COLLECTIBLE_RAINBOW_VIAL, descriptionEN, "Rainbow Vial", "en_us")
+mod:CreateEID(CollectibleType.COLLECTIBLE_RAINBOW_VIAL, descriptionRU, "Радужный Флакон", "ru")
+mod:CreateEncylopedie(CollectibleType.COLLECTIBLE_RAINBOW_VIAL, descriptionEN)
 
 
 

@@ -1,10 +1,14 @@
 local mod = SweetPack
 
-local description = {
+local descriptionEN = {
 	"{{Charm}} Charms all enemies in the room",
 }
-mod:CreateEID(CollectibleType.COLLECTIBLE_DRUM_OF_WAR, description)
-mod:CreateEncylopedie(CollectibleType.COLLECTIBLE_DRUM_OF_WAR, description)
+local descriptionRU = {
+	"{{Charm}} Очаровавывает всех врагов в комнате",
+}
+mod:CreateEID(CollectibleType.COLLECTIBLE_DRUM_OF_WAR, descriptionEN, "Drum of War", "en_us")
+mod:CreateEID(CollectibleType.COLLECTIBLE_DRUM_OF_WAR, descriptionRU, "Барабан Войны", "ru")
+mod:CreateEncylopedie(CollectibleType.COLLECTIBLE_DRUM_OF_WAR, descriptionEN)
 
 
 

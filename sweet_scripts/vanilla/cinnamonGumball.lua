@@ -1,11 +1,16 @@
 local mod = SweetPack
 
-local description = {
+local descriptionEN = {
 	"Every 24 shots, fire a piece of chewed gum that sticks to enemies and deals high damage over time",
 	"↓ -0.1 Speed down",
 }
-mod:CreateEID(CollectibleType.COLLECTIBLE_CINNAMON_GUMBALL, description)
-mod:CreateEncylopedie(CollectibleType.COLLECTIBLE_CINNAMON_GUMBALL, description)
+local descriptionRU = {
+	"Каждые 24 выстрела, выпускаете кусочек жевательной резинки, который прилипает к врагам и со временем наносит большой урон",
+	"↓ -0.1 к скорости",
+}
+mod:CreateEID(CollectibleType.COLLECTIBLE_CINNAMON_GUMBALL, descriptionEN, "Cinnamon Gumball", "en_us")
+mod:CreateEID(CollectibleType.COLLECTIBLE_CINNAMON_GUMBALL, descriptionRU, "Жевательная резинка с корицей", "ru")
+mod:CreateEncylopedie(CollectibleType.COLLECTIBLE_CINNAMON_GUMBALL, descriptionEN)
 
 
 

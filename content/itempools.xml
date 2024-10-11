@@ -25,7 +25,7 @@
 
     <!-- Secret -->
     <Pool Name="secret">
-        <Item Name="Rainbow Vial" Weight="0.5" DecreaseBy="0.5" RemoveOn="0.05"/>
+        <Item Name="Rainbow Vial" Weight="0.69" DecreaseBy="0.69" RemoveOn="0.05"/>
         <Item Name=" " Weight="0.01" DecreaseBy="0.01" RemoveOn="0.001"/>
     </Pool>
     <Pool Name="greedSecret">
@@ -53,8 +53,8 @@
         <Item Name="Curse of the Fool" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
     </Pool>
     <Pool Name="redChest">
-        <Item Name="Curse of the Emperor" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
-        <Item Name="Curse of the Fool" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
+        <Item Name="Curse of the Emperor" Weight="0.5" DecreaseBy="0.5" RemoveOn="0.1"/>
+        <Item Name="Curse of the Fool" Weight="0.5" DecreaseBy="0.5" RemoveOn="0.1"/>
     </Pool>
 
     <!-- Beggars -->

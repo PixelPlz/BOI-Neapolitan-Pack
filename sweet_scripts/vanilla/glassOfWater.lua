@@ -37,6 +37,7 @@ mod.GlassOfWaterPills = {
 	{PillEffect.PILLEFFECT_SMALLER, 1},
 	{PillEffect.PILLEFFECT_RETRO_VISION, 2},
 	{PillEffect.PILLEFFECT_X_LAX, 2},
+	{PillEffect.PILLEFFECT_SOMETHINGS_WRONG, 1},
 	{PillEffect.PILLEFFECT_IM_DROWSY, 1},
 	{PillEffect.PILLEFFECT_IM_EXCITED, 1},
 	{PillEffect.PILLEFFECT_HORF, 1},

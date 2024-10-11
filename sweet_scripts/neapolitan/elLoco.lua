@@ -51,7 +51,9 @@ function mod:ElLocoUse(id, rng, player, flags, slot, vardata)
 	end
 
 	-- Effects
-	Game():ShowHallucination(10)
+	Game():ShowHallucination(9)
+	SFXManager():Stop(SoundEffect.SOUND_DEATH_CARD) -- Play the hallucination sound at a lower volume
+	SFXManager():Play(SoundEffect.SOUND_DEATH_CARD, 1.35, 0, false, 0.5)
 
 	local fart = Isaac.Spawn(EntityType.ENTITY_EFFECT, EffectVariant.FART, 2, player.Position, Vector.Zero, player):GetSprite()
 	fart:ReplaceSpritesheet(0, "gfx/effects/effect_fart_delirious.png")

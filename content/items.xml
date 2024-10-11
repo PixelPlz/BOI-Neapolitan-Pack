@@ -3,7 +3,7 @@
     <passive id="1" name="Cinnamon Gumball" description="Don't swallow it" gfx="collectibles_CinnamonGumball.png" quality="2" tags="food offensive summonable" cache="speed" />
     <passive id="2" name="Rad Roach" description="Multiplies under stress" gfx="collectibles_RadRoach.png" quality="2" tags="fly nolostbr summonable" />
     <passive id="3" name="Faustian Donut" description="Mmm... donut" gfx="collectibles_FaustianDonut.png" quality="3" tags="food offensive summonable" cache="damage firedelay range luck" />
-    <passive id="4" name="Curse of the Emperor" description="Embrace strife" gfx="collectibles_CurseOfTheEmperor.png" quality="1" tags="nogreed offensive nocantrip lazarussharedglobal" />
+    <passive id="4" name="Curse of the Emperor" description="Embrace strife" gfx="collectibles_CurseOfTheEmperor.png" quality="1" tags="nogreed offensive nocantrip nochallenge lazarussharedglobal" />
     <passive id="5" name="Heart of Gold" description="Reap what you sow" gfx="collectibles_HeartOfGold.png" quality="3" tags="offensive summonable lazarussharedglobal" maxhearts="2" hearts="2" /> 
     <passive id="6" name="Glass of Water" description="Pills go down smoother" gfx="collectibles_GlassOfWater.png" quality="2" tags="nokeeper nolostbr summonable" />
 

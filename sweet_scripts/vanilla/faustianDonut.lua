@@ -2,13 +2,13 @@ local mod = SweetPack
 
 local descriptionEN = {
 	"↑ +0.5 Damage up",
-	"↑ +15% Tear Multiplier",
+	"↑ +12% Tear Multiplier",
 	"↑ +2 Range up",
 	"↓ -1 Luck down",
 }
 local descriptionRU = {
 	"↑ +0.5 к урону",
-	"↑ +15% множитель слезы",
+	"↑ +12% множитель слезы",
 	"↑ +2 дальности",
 	"↓ -1 удача",
 }
@@ -27,7 +27,7 @@ function mod:DonutCache(player, cacheFlags)
 
 		-- Tears
 		if cacheFlags & CacheFlag.CACHE_FIREDELAY > 0 then
-			player.MaxFireDelay = player.MaxFireDelay * 0.85
+			player.MaxFireDelay = player.MaxFireDelay * 0.88
 		end
 
 		-- Range

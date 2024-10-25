@@ -1,7 +1,7 @@
 local mod = SweetPack
 
 local descriptionEN = {
-	"Spawns 3 purgatory ghosts",
+	"Spawns 3 homing exploding ghosts",
 }
 local descriptionRU = {
 	"Создает 3 призрака чистилища",

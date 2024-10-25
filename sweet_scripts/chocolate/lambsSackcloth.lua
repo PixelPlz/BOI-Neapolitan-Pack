@@ -51,6 +51,9 @@ function mod:LambSackNewRoom()
 						player:ThrowBlueSpider(player.Position, pos)
 					end
 				end
+
+				-- Sound
+				SFXManager():Play(SoundEffect.SOUND_MENU_RIP, 1.25)
 			end
 		end
 	end

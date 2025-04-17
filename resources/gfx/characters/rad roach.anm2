@@ -1,11 +1,11 @@
 <AnimatedActor>
-	<Info CreatedBy="robot" CreatedOn="2023. 09. 27. 12:56:58" Version="112" Fps="30"/>
+	<Info CreatedBy="robot" CreatedOn="2025. 04. 17. 17:54:02" Version="114" Fps="30"/>
 	<Content>
 		<Spritesheets>
 			<Spritesheet Path="costumes\costume_radroach.png" Id="0"/>
 		</Spritesheets>
 		<Layers>
-			<Layer Name="head1" Id="0" SpritesheetId="0"/>
+			<Layer Name="head5" Id="0" SpritesheetId="0"/>
 		</Layers>
 		<Nulls/>
 		<Events/>

@@ -2,7 +2,7 @@ local mod = SweetPack
 
 local descriptionEN = {
     "{{Coin}} Entering a new floor grants +7 coins",
-	"↑ +1 Health up",
+	"↑ +1 Health",
 	"{{GoldenHeart}} +1 Golden Heart",
 }
 local descriptionRU = {
@@ -22,7 +22,7 @@ function mod.HeartOfGoldNewLevel()
 
         for j = 1, player:GetCollectibleNum(CollectibleType.COLLECTIBLE_HEART_OF_GOLD, false) do
             player:AddCoins(7)
-            SFXManager():Play(SoundEffect.SOUND_PENNYPICKUP)
+            SFXManager():Play(SoundEffect.SOUND_NICKELPICKUP, 0.5)
         end
     end
 end

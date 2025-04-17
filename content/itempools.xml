@@ -44,6 +44,7 @@
 
     <!-- Angel -->
     <Pool Name="angel">
+        <Item Name="Heart of Gold" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
         <Item Name="His Blood" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
     </Pool>
 

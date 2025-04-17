@@ -1,11 +1,11 @@
 <AnimatedActor>
-	<Info CreatedBy="robot" CreatedOn="2023. 09. 27. 12:56:10" Version="112" Fps="30"/>
+	<Info CreatedBy="robot" CreatedOn="2025. 04. 17. 17:49:29" Version="113" Fps="30"/>
 	<Content>
 		<Spritesheets>
 			<Spritesheet Path="costumes\costume_heartofgold.png" Id="0"/>
 		</Spritesheets>
 		<Layers>
-			<Layer Name="head1" Id="0" SpritesheetId="0"/>
+			<Layer Name="head2" Id="0" SpritesheetId="0"/>
 		</Layers>
 		<Nulls/>
 		<Events/>

@@ -1,7 +1,7 @@
 local mod = SweetPack
 
 local descriptionEN = {
-	"{{Heart}} +1 Health up",
+	"{{Heart}} +1 Health",
 	"{{SoulHeart}} +1 Soul Heart",
 	"{{EternalHeart}} +1 Eternal Heart",
 	"{{BlackHeart}} +1 Black Heart",

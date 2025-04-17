@@ -1,10 +1,10 @@
 local mod = SweetPack
 
 local descriptionEN = {
-	"↑ +0.5 Damage up",
-	"↑ +12% Tear Multiplier",
-	"↑ +2 Range up",
-	"↓ -1 Luck down",
+	"↑ +0.5 Damage",
+	"↑ +12% Tears multiplier",
+	"↑ +2 Range",
+	"↓ -1 Luck",
 }
 local descriptionRU = {
 	"↑ +0.5 к урону",

@@ -2,7 +2,7 @@ local mod = SweetPack
 
 local descriptionEN = {
 	"Every 24 shots, fire a piece of chewed gum that sticks to enemies and deals high damage over time",
-	"↓ -0.05 Speed down",
+	"↓ -0.05 Speed",
 }
 local descriptionRU = {
 	"Каждые 24 выстрела, выпускаете кусочек жевательной резинки, который прилипает к врагам и со временем наносит большой урон",

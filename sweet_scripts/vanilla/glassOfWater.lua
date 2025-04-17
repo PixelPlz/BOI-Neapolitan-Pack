@@ -4,7 +4,7 @@ local descriptionEN = {
     "{{SoulHeart}} Using a neutral or bad pill will give a half or full Soul Heart respectively",
 }
 local descriptionRU = {
-    "{{SoulHeart}} Используя нейтральную или плохую таблетку даст половину или поное Сердце Души соответственно",
+    "{{SoulHeart}} Используя нейтральную или плохую таблетку даст половину или полное Сердце Души соответственно",
 }
 mod:CreateEID(CollectibleType.COLLECTIBLE_GLASS_OF_WATER, descriptionEN, "Glass of Water", "en_us")
 mod:CreateEID(CollectibleType.COLLECTIBLE_GLASS_OF_WATER, descriptionRU, "Стакан Воды", "ru")
@@ -51,9 +51,9 @@ function mod:GlassOfWaterPill(effect, player)
 	if player:HasCollectible(CollectibleType.COLLECTIBLE_GLASS_OF_WATER, false) and effect ~= PillEffect.PILLEFFECT_VURP then
 		local effectConfig = Isaac.GetItemConfig():GetPillEffect(effect)
 
-		for i, effect in pairs(mod.GlassOfWaterPills) do
-			if effectConfig.ID == effect[1] then
-				local hearts = effect[2]
+		for i, entry in pairs(mod.GlassOfWaterPills) do
+			if effectConfig.ID == entry[1] then
+				local hearts = entry[2]
 				player:AddSoulHearts(hearts * player:GetCollectibleNum(CollectibleType.COLLECTIBLE_GLASS_OF_WATER, false))
 
 				-- Effects
@@ -62,7 +62,7 @@ function mod:GlassOfWaterPill(effect, player)
 				visual.DepthOffset = player.DepthOffset + 10
 				visual.SpriteOffset = Vector(0, player.SpriteScale.Y * -35)
 
-				SFXManager():Play(SoundEffect.SOUND_VAMP_GULP)
+				SFXManager():Play(SoundEffect.SOUND_VAMP_GULP, 0.8)
 
 				break
 			end

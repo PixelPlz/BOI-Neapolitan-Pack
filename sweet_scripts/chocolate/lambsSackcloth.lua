@@ -19,7 +19,7 @@ mod:CreateEncylopedie(CollectibleType.COLLECTIBLE_LAMBS_SACKCLOTH, descriptionEN
 function mod:LambSackNewRoom()
 	local room = Game():GetRoom()
 
-	if room:IsClear() == false then
+	if room:IsClear() == false and room:IsFirstVisit() == true then
 		for i = 0, Game():GetNumPlayers() - 1 do
 			local player = Isaac.GetPlayer(i)
 
@@ -53,7 +53,7 @@ function mod:LambSackNewRoom()
 				end
 
 				-- Sound
-				SFXManager():Play(SoundEffect.SOUND_MENU_RIP, 1.25)
+				SFXManager():Play(SoundEffect.SOUND_MENU_RIP, 0.7)
 			end
 		end
 	end

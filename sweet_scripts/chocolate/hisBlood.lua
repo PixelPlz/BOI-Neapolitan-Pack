@@ -1,10 +1,10 @@
 local mod = SweetPack
 
 local descriptionEN = {
-	"{{HalfHeart}} Heals half a red heart when entering an uncleared room at or below three red hearts",
+	"{{HealingRed}} Heals half a red heart when entering an uncleared room at or below three red hearts",
 }
 local descriptionRU = {
-	"{{HalfHeart}} Лечит половину красного сердца при входе в неочищенную комнату имея три или меньше красных сердец",
+	"{{HealingRed}} Лечит половину красного сердца при входе в неочищенную комнату имея три или меньше красных сердец",
 }
 mod:CreateEID(CollectibleType.COLLECTIBLE_HIS_BLOOD, descriptionEN, "His Blood", "en_us")
 mod:CreateEID(CollectibleType.COLLECTIBLE_HIS_BLOOD, descriptionRU, "Его Кровь", "ru")
@@ -13,7 +13,9 @@ mod:CreateEncylopedie(CollectibleType.COLLECTIBLE_HIS_BLOOD, descriptionEN)
 
 
 function mod:HisBloodHeal()
-	if Game():GetRoom():IsClear() == false then
+	local room = Game():GetRoom()
+
+	if room:IsClear() == false and room:IsFirstVisit() == true then
 		for i = 0, Game():GetNumPlayers() - 1 do
 			local player = Isaac.GetPlayer(i)
 			local doEffect = false
@@ -33,7 +35,7 @@ function mod:HisBloodHeal()
 				visual.DepthOffset = player.DepthOffset + 10
 				visual.SpriteOffset = Vector(0, player.SpriteScale.Y * -35)
 
-				SFXManager():Play(SoundEffect.SOUND_VAMP_GULP)
+				SFXManager():Play(SoundEffect.SOUND_VAMP_GULP, 0.55)
 			end
 		end
 	end

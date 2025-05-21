@@ -39,6 +39,12 @@ function mod:DonutCache(player, cacheFlags)
 		if cacheFlags & CacheFlag.CACHE_LUCK > 0 then
 			player.Luck = player.Luck - 1
 		end
+
+		-- Binge Eater speed
+		if player:HasCollectible(CollectibleType.COLLECTIBLE_BINGE_EATER, false)
+		and cacheFlags & CacheFlag.CACHE_SPEED > 0 then
+			player.MoveSpeed = player.MoveSpeed * 0.88
+		end
 	end
 end
 mod:AddCallback(ModCallbacks.MC_EVALUATE_CACHE, mod.DonutCache)

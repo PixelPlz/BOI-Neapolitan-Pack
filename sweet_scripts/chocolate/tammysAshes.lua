@@ -38,3 +38,14 @@ function mod:TammysAshesUse(id, rng, player, flags, slot, vardata)
 	}
 end
 mod:AddCallback(ModCallbacks.MC_USE_ITEM, mod.TammysAshesUse, CollectibleType.COLLECTIBLE_TAMMYS_ASHES)
+
+
+
+-- Wisp ghosts
+function mod:TammysAshesWisp(wisp)
+	if wisp.SubType == CollectibleType.COLLECTIBLE_TAMMYS_ASHES and wisp:HasMortalDamage() then
+		local player = wisp.Player
+		Isaac.Spawn(EntityType.ENTITY_EFFECT, EffectVariant.PURGATORY, 1, wisp.Position, Vector.Zero, player)
+	end
+end
+mod:AddCallback(ModCallbacks.MC_FAMILIAR_UPDATE, mod.TammysAshesWisp, FamiliarVariant.WISP)

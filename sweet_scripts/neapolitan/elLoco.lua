@@ -1,7 +1,7 @@
 local mod = SweetPack
 
 local descriptionEN = {
-	"Warp nearby enemies into weaker enemies, poops or pickups",
+	"Warp enemies into poops or pickups within close range",
 	"Applies a random status effect to every enemy in the room",
 }
 local descriptionRU = {
@@ -62,27 +62,16 @@ function mod:ElLocoUse(id, rng, player, flags, slot, vardata)
 
 			-- Warp enemies
 			if not enemy:IsBoss() and enemy.Position:Distance(player.Position) <= 85 then
-				local warpRoll = mod:Random()
-
-				-- Remove completely
-				if warpRoll <= 0.11 then
-					enemy:Remove()
-
-				-- Reroll
-				elseif warpRoll <= 0.33 then
-					Game():RerollEnemy(enemy)
+				local warpRoll = mod:Random(1, 1000) -- Divide it by 10 to get the chances :)
+				enemy:Remove()
 
 				-- Turn into poop
-				elseif warpRoll <= 0.66 then
-					enemy:Remove()
-
-					local poopVariant = warpRoll <= 0.335 and 1 or 0
+				if warpRoll <= 300 then
+					local poopVariant = warpRoll <= 5 and 1 or 0 -- !!! GOLDEN POOP LOOK IT'S RIGHT HERE !!!
 					Isaac.Spawn(EntityType.ENTITY_POOP, poopVariant, 0, enemy.Position, enemy.Velocity, player)
 
 				-- Turn into pickups
-				else
-					enemy:Remove()
-
+				elseif warpRoll <= 700 then
 					local chosen = mod:Random(1, #mod.ElLocoPickups)
 					chosen = mod.ElLocoPickups[chosen]
 					Isaac.Spawn(EntityType.ENTITY_PICKUP, chosen[1], chosen[2], enemy.Position, enemy.Velocity, player)
@@ -112,3 +101,28 @@ function mod:ElLocoUse(id, rng, player, flags, slot, vardata)
 	}
 end
 mod:AddCallback(ModCallbacks.MC_USE_ITEM, mod.ElLocoUse, CollectibleType.COLLECTIBLE_EL_LOCO)
+
+
+
+-- Wisp farts
+function mod:ElLocoWisp(wisp)
+	if wisp.SubType == CollectibleType.COLLECTIBLE_EL_LOCO and wisp:HasMortalDamage() then
+		local chosen = mod:Random(1, 3)
+		local player = wisp.Player
+		local radius = 85
+
+		-- Butter Bean fart
+		if chosen == 1 then
+			Game():ButterBeanFart(wisp.Position, radius, player, true, false)
+
+		-- Kideny Bean fart
+		elseif chosen == 2 then
+			Game():CharmFart(wisp.Position, radius, player)
+
+		-- Regular fart
+		else
+			Game():Fart(wisp.Position, radius, player)
+		end
+	end
+end
+mod:AddCallback(ModCallbacks.MC_FAMILIAR_UPDATE, mod.ElLocoWisp, FamiliarVariant.WISP)

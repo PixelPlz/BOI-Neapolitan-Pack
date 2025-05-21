@@ -1,0 +1,17 @@
+<wisps gfxroot="gfx/familiar/wisps/">
+	<!-- Tammy's Ashes -->
+	<color name="flame_grey" r="120" g="120" b="120"/>
+	<color name="core_grey" r="200" g="200" b="200"/>
+	<wisp id="8" flameColor="flame_grey" coreColor="core_grey" coreGfx="ghost.png" canShoot="false" />
+
+	<!-- Drum of War -->
+	<color name="flame_red" r="500" g="220" b="220"/>
+	<color name="core_red" r="255" g="60" b="60"/>
+	<color name="tear_red" r="180" g="60" b="80" or="30"/>
+	<wisp id="9" flameColor="flame_red" coreColor="core_red" tearFlags2="13" procChance="0.2" tearColor="tear_red" />
+
+	<!-- El Loco -->
+	<color name="flame_white" r="460" g="460" b="420"/>
+	<color name="core_white" r="510" g="510" b="510"/>
+	<wisp id="13" flameColor="flame_white" coreColor="core_white" coreGfx="dripping.png" count="3" canShoot="false" />
+</wisps>

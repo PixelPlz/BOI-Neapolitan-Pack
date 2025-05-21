@@ -25,11 +25,11 @@
 
     <!-- Secret -->
     <Pool Name="secret">
-        <Item Name="Rainbow Vial" Weight="0.69" DecreaseBy="0.69" RemoveOn="0.069"/>
+        <Item Name="Rainbow Vial" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
         <Item Name=" " Weight="0.01" DecreaseBy="0.01" RemoveOn="0.001"/>
     </Pool>
     <Pool Name="greedSecret">
-        <Item Name="Rainbow Vial" Weight="0.69" DecreaseBy="0.69" RemoveOn="0.069"/>
+        <Item Name="Rainbow Vial" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
         <Item Name=" " Weight="0.01" DecreaseBy="0.01" RemoveOn="0.001"/>
     </Pool>
 
@@ -64,5 +64,11 @@
     </Pool>
     <Pool Name="rottenBeggar">
         <Item Name="Heart of Gold" Weight="0.5" DecreaseBy="0.5" RemoveOn="0.05"/>
+    </Pool>
+
+    <!-- Ultra Secret -->
+    <Pool Name="ultraSecret">
+        <Item Name="Tammy's Ashes" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
+        <Item Name="His Blood" Weight="1" DecreaseBy="1" RemoveOn="0.1"/>
     </Pool>
 </ItemPools>
